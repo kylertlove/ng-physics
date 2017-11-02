@@ -79,7 +79,7 @@
             "check-else",
             "check-whitespace"
         ],
-        "prefer-const": true,
+        "prefer-const": false,
         "quotemark": [
             true,
             "single"
@@ -94,7 +94,7 @@
             "allow-null-check"
         ],
         "typedef-whitespace": [
-            true,
+            false,
             {
                 "call-signature": "nospace",
                 "index-signature": "nospace",
@@ -107,7 +107,7 @@
         "unified-signatures": true,
         "variable-name": false,
         "whitespace": [
-            true,
+            false,
             "check-branch",
             "check-decl",
             "check-operator",

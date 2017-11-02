@@ -6,7 +6,7 @@ export class ConditionalProbabilityService {
   constructor() { }
 
   getConditional(){
-    return 'conditional';
+    
   }
 
 }

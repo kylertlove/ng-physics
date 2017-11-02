@@ -6,6 +6,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './components/app.component';
 import { NgPhysicsModule } from './ng-physics/ng-physics.module';
 import { HomeComponent } from './components/home/home.component';
+import { NgStatisticsModule } from './ng-statistics/ng-statistics.module';
 
 const routes: Routes = [
 {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -17,7 +18,8 @@ const routes: Routes = [
     AppComponent, HomeComponent
   ],
   imports: [
-    BrowserModule, NgbModule.forRoot(), RouterModule.forRoot(routes), NgPhysicsModule.forRoot()
+    BrowserModule, NgbModule.forRoot(), RouterModule.forRoot(routes), NgPhysicsModule.forRoot(),
+    NgStatisticsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

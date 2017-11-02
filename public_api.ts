@@ -1,1 +1,1 @@
-export * from './src/app/ng-physics/ng-physics.module';
+export * from './src/app/ng-statistics/ng-statistics.module';
