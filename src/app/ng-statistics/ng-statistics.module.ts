@@ -1,6 +1,7 @@
 import { NgModule, Optional, SkipSelf, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StatisticsService } from './statistics/statistics.service';
+import { ZTable } from './models/zTable';
 
 @NgModule({
   imports: [CommonModule],
@@ -12,7 +13,7 @@ export class NgStatisticsModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: NgStatisticsModule,
-      providers: [StatisticsService]
+      providers: [StatisticsService, ZTable]
     };
   }
 
