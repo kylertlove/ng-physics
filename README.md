@@ -1,3 +1,5 @@
+# Angular Statistics exportable lib
+
 # Building Angular 4 service library
 This project is an initial attempt at creating deployable libraries with using the angular CLI build process
 
