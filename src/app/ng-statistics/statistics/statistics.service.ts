@@ -14,6 +14,7 @@ export class StatisticsService {
       y += val;
     });
     return y / x;
+    
   }
 
   /** Returns the median from a given array. (Floor of even length arrays)  */
