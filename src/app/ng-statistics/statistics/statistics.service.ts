@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ZTable } from '../models/zTable';
+import { Point } from '../models/point';
 
 @Injectable()
 export class StatisticsService {
@@ -8,13 +9,11 @@ export class StatisticsService {
 
   /** Returns the average of a given number array */
   mean(array: number[]){
-    let x = array.length;
     let y = 0;
     array.forEach( (val) => {
       y += val;
     });
-    return y / x;
-    
+    return y / array.length;
   }
 
   /** Returns the median from a given array. (Floor of even length arrays)  */
@@ -22,6 +21,21 @@ export class StatisticsService {
     let x = Math.floor(array.length / 2);
     array = array.sort();
     return array[x];
+  }
+
+  /** Returns the Range of a number set */
+  range(arr: number[]) {
+    return Math.max(...arr) - Math.min(...arr);
+  }
+/** Pass in the Set and value and it returns the percentile  */
+  percentile(set:number[], value:number) {
+      set = set.sort();
+      let place = set.indexOf(value);
+      if(place === -1) {
+        return new Error("value not included in set")
+      }else {
+        return (place + 1)/set.length;
+      }
   }
 
   /** Gives the Variance for a sample from the given array of numbers */
